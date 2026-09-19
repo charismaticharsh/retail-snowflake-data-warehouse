@@ -4,8 +4,6 @@ An end-to-end retail data warehouse built using Snowflake SQL and Python.
 
 The project demonstrates how structured CSV data and semi-structured JSON customer events can be ingested, transformed, modeled and exposed through analytical data marts.
 
----
-
 ##Project Overview
 
 This project simulates a retail analytics platform built on Snowflake.
@@ -18,8 +16,6 @@ The objective was to create a centralized analytical warehouse capable of suppor
 - Store performance
 - Customer behavior analysis
 - Data quality monitoring
-
----
 
 ##Problem Statement
 
@@ -189,3 +185,31 @@ It provides reusable dimensional models and analytical data marts for sales, pro
 
 Author
 Harsh Khandelwal
+
+---
+
+## Project Screenshots
+
+### Snowflake Database Architecture
+
+![Snowflake Database](screenshots/database.png)
+
+### Core Star Schema
+
+![Core Tables](screenshots/core_tables.png)
+
+### Data Marts
+
+![Data Marts](screenshots/data_marts.png)
+
+### JSON / VARIANT Processing
+
+![JSON Processing](screenshots/json_variant.png)
+
+### Data Quality Results
+
+![Data Quality](screenshots/dq_results.png)
+
+### Query History
+
+![Query History](screenshots/query_history.png)
