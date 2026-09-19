@@ -32,7 +32,6 @@ The solution uses a layered architecture to separate ingestion, transformation, 
 
 ##Architecture
 
-```text
 Python
    |
    v
@@ -185,31 +184,3 @@ It provides reusable dimensional models and analytical data marts for sales, pro
 
 Author
 Harsh Khandelwal
-
----
-
-## Project Screenshots
-
-### Snowflake Database Architecture
-
-![Snowflake Database](screenshots/database.png)
-
-### Core Star Schema
-
-![Core Tables](screenshots/core_tables.png)
-
-### Data Marts
-
-![Data Marts](screenshots/data_marts.png)
-
-### JSON / VARIANT Processing
-
-![JSON Processing](screenshots/json_variant.png)
-
-### Data Quality Results
-
-![Data Quality](screenshots/dq_results.png)
-
-### Query History
-
-![Query History](screenshots/query_history.png)
