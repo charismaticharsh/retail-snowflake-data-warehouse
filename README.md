@@ -188,7 +188,7 @@ Harsh Khandelwal
 ## Project Screenshots
 
 ###1. Snowflake Database Architecture
-![Database Architecture](screenshots/01_database_architecture.jpeg)
+![Database Architecture](screenshots/01_database_architecuture.jpeg)
 
 ###2. RAW and STAGING Layers
 ![RAW and STAGING](screenshots/02_raw_staging.png)
