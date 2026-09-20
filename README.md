@@ -153,11 +153,35 @@ Checks include:
 
 ##Snowflake Features Demonstrated
 
--Streams
-Used to demonstrate change data capture capabilities on staging data.
+##Streams
+A Snowflake Stream was created on the staging orders table to capture changes made after the stream offset was established.
 
--Tasks
-Used to demonstrate scheduled warehouse processing.
+The Stream captures change metadata including:
+- METADATA$ACTION
+- METADATA$ISUPDATE
+- METADATA$ROW_ID
+
+##Tasks
+A Snowflake Task was implemented to process captured Stream changes into a downstream CDC table.
+
+The Task uses:
+`SYSTEM$STREAM_HAS_DATA()`
+
+to execute only when the Stream contains changes.
+
+##CDC Pipeline
+The Stream and Task were combined to demonstrate incremental change processing:
+
+STG_ORDERS
+     |
+     v
+STG_ORDERS_STREAM
+     |
+     v
+TASK_PROCESS_ORDER_CDC
+     |
+     v
+CDC_ORDER_DEMO
 
 -Time Travel
 Used to demonstrate historical data access.
@@ -207,3 +231,11 @@ Harsh Khandelwal
 
 ###7. Query History
 ![Query History](screenshots/07_query_history.jpeg)
+
+###8. Stream CDC
+
+![Stream CDC](screenshots/08_stream_cdc.jpeg)
+
+###9. Task CDC Processing
+
+![Task CDC](screenshots/09_task_cdc_result.jpeg)
