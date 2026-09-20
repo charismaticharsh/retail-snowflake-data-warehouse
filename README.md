@@ -184,3 +184,26 @@ It provides reusable dimensional models and analytical data marts for sales, pro
 
 Author
 Harsh Khandelwal
+
+## Project Screenshots
+
+###1. Snowflake Database Architecture
+![Database Architecture](screenshots/01_database_architecture.jpeg)
+
+###2. RAW and STAGING Layers
+![RAW and STAGING](screenshots/02_raw_staging.png)
+
+###3. CORE Star Schema
+![CORE Star Schema](screenshots/03_core_star_schema.jpeg)
+
+###4. Analytical Data Marts
+![Data Marts](screenshots/04_data_marts.jpeg)
+
+###5. JSON / VARIANT Processing
+![JSON VARIANT](screenshots/05_json_variant.jpeg)
+
+###6. Data Quality Framework
+![Data Quality](screenshots/06_data_quality.jpeg)
+
+###7. Query History
+![Query History](screenshots/07_query_history.jpeg)
