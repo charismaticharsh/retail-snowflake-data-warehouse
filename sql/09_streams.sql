@@ -1,23 +1,31 @@
--- Snowflake Stream
--- Tracks changes to STG_ORDERS
+-- Snowflake Change Data Capture Demonstration
+-- Create a Stream on the staging orders table.
+-- The Stream captures changes made after its offset is established.
 
 CREATE OR REPLACE STREAM RETAIL_DWH.STAGING.STG_ORDERS_STREAM
 ON TABLE RETAIL_DWH.STAGING.STG_ORDERS;
 
--- View stream metadata
+-- Verify the Stream
+SHOW STREAMS IN SCHEMA RETAIL_DWH.STAGING;
+
+-- View captured changes
 SELECT *
 FROM RETAIL_DWH.STAGING.STG_ORDERS_STREAM;
 
--- Demonstrate change tracking
+-- CDC DEMONSTRATION
+-- Update an existing staging record to generate a CDC event.
+-- Use an existing ORDER_ID from STG_ORDERS.
+
 UPDATE RETAIL_DWH.STAGING.STG_ORDERS
-SET ORDER_STATUS = 'STREAM_TEST'
+SET ORDER_STATUS = 'CDC_TEST'
 WHERE ORDER_ID = 1000001;
 
--- View captured change
+-- View the captured change.
 SELECT *
 FROM RETAIL_DWH.STAGING.STG_ORDERS_STREAM;
 
---Revert test Data
-Update RETAIL_DWH.STAGING.STG_ORDERS
-SET ORDER_STATUS = 'CANCELLED'
-WHERE ORDER_ID = '1000001'
+
+-- Stream metadata includes:
+-- METADATA$ACTION
+-- METADATA$ISUPDATE
+-- METADATA$ROW_ID
